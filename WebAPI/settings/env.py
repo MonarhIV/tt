@@ -1,7 +1,7 @@
 from environs import Env
 
 
-async def settings_data(name: str):
+async def settings_data(name):
     env = Env()
     env.read_env('settings.txt')
-    return env.srt(name)
+    return env(name)
