@@ -9,8 +9,8 @@
   }
 
 .window {
-    width: 450px;
-    left: calc(50% - 225px);
+    width: 500px;
+    left: calc(50% - 250px);
     position: relative;
 }
 

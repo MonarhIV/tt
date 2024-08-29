@@ -10,24 +10,25 @@
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'main/js/script.js' %}" defer></script>
+    <script src="{% static 'main/js/form.js' %}" defer></script>
 </head>
 <body>
     <div class="window">
         <div class="menu">
             <p class="text"><B>Создать заявку</B></p>
-            <form>
+            <form id="requestForm">
                 <div class="flex">
                     <div>
                         <b>Название заявки</b><br>
-                        <input class="input" type=text maxlength=25 size=10>
+                        <input class="input" id="name" type=text maxlength=25 size=10>
                     </div>
                     <div>
                         <b>Время на решение в сек.</b><br>
-                        <input class="input" type=text maxlength=25 size=11>
+                        <input class="input" id="time" type=text maxlength=25 size=11>
                     </div>
                     <div>
                         <b>Статус</b><br>
-                        <select class="select">
+                        <select class="select" id="status">
                             <option value="new">Новая</option>
                             <option value="wait">Ожидает ответа</option>
                             <option value="solved">Решена</option>

@@ -1,21 +1,23 @@
 function fetchData() {
   $.ajax({
-      url: 'http://127.0.0.1:4000/api/ticket',
-      method: 'GET',
-      success: function(data) {
-          var tableBody = $('#data-table tbody');
-          tableBody.empty(); // Очистить текущие данные
-          data.forEach(function(entry) {
-              tableBody.append('<tr><td>' + entry.id + '</td><td>' +
-                               entry.name + '</td><td>' + entry.TimeCreate + '</td><td>' + 
-                               entry.TimeToResolve + '</td><td>' + 
-                               entry.status + '</td></tr>');
-          });
-      }
+    url: 'http://127.0.0.1:4000/api/ticket',
+    method: 'GET',
+    success: function(response) {
+      var tickets = response.tikets; // Достаём массив тикетов из ответа
+      var tableBody = $('#data-table tbody');
+      tableBody.empty(); // Очистить текущие данные, если это необходимо
+      tickets.forEach(function(ticket) {
+        tableBody.append('<tr><td>' + ticket.id + '</td><td>' +
+                         ticket.name + '</td><td>' +
+                         ticket.timeCreate + '</td><td>' + 
+                         ticket.timeToResolve + '</td><td>' + 
+                         ticket.status + '</td></tr>');
+      });
+    }
   });
 }
 
 // Вызывать функцию для получения данных каждые 5 секунд
-setInterval(fetchData, 5000);
+setInterval(fetchData, 15000);
 // Вызовем сразу, чтобы не ждать интервал
 fetchData();
