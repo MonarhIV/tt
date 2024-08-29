@@ -1,3 +1,0 @@
-dbname=tt
-user=postgres
-password=123

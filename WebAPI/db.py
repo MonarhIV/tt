@@ -1,6 +1,5 @@
 import asyncio
 import psycopg
-from settings.env import settings_data
 
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
