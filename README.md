@@ -1,9 +1,9 @@
-1.запустить creatdb
-2.Открыть 2 терминала
-  a)В 1 перейти в /tt/client
-    и запустить:
-      python manage.py runserver
+<p>1.запустить <B>creatdb</B></p>
+<p>2.Открыть 2 терминала</p>
+  <p>a)В 1 перейти в /tt/client</p>
+    <p>и запустить:</p>
+     <p><B> python manage.py runserver</B></p>
 
-  b)во 2 в /tt/WebAPI
-    и запустить:
-      uvicorn main:app --port 4000 --reload
+  <p>b)во 2 в /tt/WebAPI</p>
+    <p>и запустить:</p>
+      <p><B>uvicorn main:app --port 4000 --reload</B></p>
