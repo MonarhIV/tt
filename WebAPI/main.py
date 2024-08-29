@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
-from WebAPI.requests import PostRequest, GetResponse
+from requests import PostRequest, GetResponse
 from db import CreatTickets, clientResponse
 
 app = FastAPI(
