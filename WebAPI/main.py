@@ -10,7 +10,7 @@ app = FastAPI(
 
 @app.post('/api/ticket')
 async def f(request: PostRequest):
-    if await CreatRequest(request.name, request.status, datetime.now(), request.timeToSolve):
+    if await CreatRequest(request.name, request.status, datetime.now(), request.timeToSolve, 'client'):
         return 200
     return 400
 

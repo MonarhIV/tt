@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'main/js/script.js' %}" defer></script>
+</head>
+<body>
+    <div class="window">
+        <div class="menu">
+            <p class="text"><B>Создать заявку</B></p>
+            <form>
+                <div class="flex">
+                    <div>
+                        <b>Название заявки</b><br>
+                        <input class="input" type=text maxlength=25 size=10>
+                    </div>
+                    <div>
+                        <b>Время на решение в сек.</b><br>
+                        <input class="input" type=text maxlength=25 size=11>
+                    </div>
+                    <div>
+                        <b>Статус</b><br>
+                        <select class="select">
+                            <option value="new">Новая</option>
+                            <option value="wait">Ожидает ответа</option>
+                            <option value="solved">Решена</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="button buy-button" :hover type=submit name=request value="ok">&nbspОтправить&nbsp</button>
+            </form>
+        </div>
+        <div class="menu">
+            <p class="text"><B>Таблица заявок</B></p>
+            <table id="data-table" border="1" align="center" bordercolor="black" cols="5">
+                <thead>
+                  <tr>
+                    <th>Индетефикатор заявки</th>
+                    <th>Название заявки</th>
+                    <th>Дата создания Заявки</th>
+                    <th>Время на решение в сек.</th>
+                    <th>статус</th>                    
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>  
+        </div>
+    </div>
+</body>
+</html>

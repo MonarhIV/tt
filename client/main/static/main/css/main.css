@@ -1,0 +1,64 @@
+:root {
+    /* Colors */
+    --black: rgba(0, 0, 0, 0);
+    
+    --text-10-bold-family: "SF Pro Text";
+    --text-10-bold-size: 10px;
+    --text-10-bold-weight: 20px;
+    --text-10-bold-line-height: 12px;
+  }
+
+.window {
+    width: 450px;
+    left: calc(50% - 225px);
+    position: relative;
+}
+
+.menu {
+    border-top: 10px solid gainsboro;
+    border-bottom: 20px solid gainsboro;
+    font-family: var(--text-10-bold-family);
+    font-size: var(--text-10-bold-size);
+    font-weight: var(--text-10-bold-weight);
+    line-height: var(--text-10-bold-line-height);
+    background-color: gainsboro;
+}
+
+.text {
+    left: 10px;
+    position: relative;
+}
+
+.flex {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input {
+    height: 10px;
+}
+
+.select {
+    height: 16px;
+}
+
+.button{
+    left: calc(50% - 52.5px);
+    position: relative;
+    display: inline-block;
+    background-color: palevioletred;
+    user-select: none;
+    border:0px;
+    border-radius: 3px;
+}
+  
+.button:hover{
+    background-color: red;
+}
+
+.table {
+    width: 100px;
+}
